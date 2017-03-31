@@ -1,4 +1,4 @@
-var computerChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+var computerChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 var wins=0;
 var losses=0;
@@ -18,11 +18,11 @@ var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.l
 
 var newGuessesLeft = function () {
 	document.getElementById('guessesLeft').innerHTML = guessesLeft;
-}
+};
 
 var newGuessedLetters = function() {
 	document.getElementById('yourGuessesSoFar').innerHTML = guessedLetters.join(',');
-}
+};
 
 var reset = function() {
 	computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
@@ -33,7 +33,7 @@ var reset = function() {
 	
 	newGuessesLeft();
 	newGuessedLetters();
-}
+};
 
 document.onkeyup = function(event) {
 	guessesLeft--;
@@ -56,7 +56,7 @@ document.onkeyup = function(event) {
 		}
 	}
 	
-	else if(guessesLeft == 0)
+	else if(guessesLeft === 0)
 	{
 		losses++;
 		// document.querySelector('#losses').innerHTML = "Losses: " + losses;
